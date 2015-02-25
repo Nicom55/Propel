@@ -1,0 +1,4 @@
+<!-- display an index of all goals -->
+<% @goals.each do |goal| %>
+  <%= content_tag :p, goal.title %>
+<% end %>
