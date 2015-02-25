@@ -1,5 +1,9 @@
 class Goal < ActiveRecord::Base
   
-  validates :title, presence :true
+  #validations
+  validates :title, presence: true
+  
+  #linking goals to users
+  belongs_to :user
 
 end
