@@ -3,8 +3,8 @@ Welcome to Propel!
 View your goals below:
 
 <% @goals.each do |goal| %>
-  <%= goal.title %>
-  <%= goal.body %>
+  <%= content_tag :p, goal.title %>
+  <%= content_tag :p, goal.body %>
 <% end %>
 
 <nav>
