@@ -1,4 +1,12 @@
 <!-- display an index of all goals -->
+My Goals:
 <% @goals.each do |goal| %>
   <%= content_tag :p, goal.title %>
 <% end %>
+
+<nav>
+  <ul>
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "Create a New Goal", new_goal_path %></li>
+  </ul>
+</nav>
