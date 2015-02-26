@@ -1,0 +1,12 @@
+<div>
+  <%= content_tag :p, @goal.title %>
+  <%= content_tag :p, @goal.id %>
+  <%= content_tag :p, @goal.body%>
+  <%= content_tag :p, @goal.created_at %>
+  <%= content_tag :p, @goal.updated_at %>
+  <nav>
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+    </ul>
+  </nav>
+</div>

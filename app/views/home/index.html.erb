@@ -2,10 +2,18 @@ Welcome to Propel!
 
 View your goals below:
 
-<% @goals.each do |goal| %>
-  <%= content_tag :p, goal.title %>
-  <%= content_tag :p, goal.body %>
-<% end %>
+<div>
+  <% @goals.each do |goal| %>
+    <%= div_for goal do %>
+      <%= content_tag :p, goal.title %>
+      <%= content_tag :p, goal.body %>  
+      <p>
+        <%= link_to "View Details", goal_path(goal) %> 
+      </p>
+    <% end %>
+  <% end %>
+</div>
+
 
 <nav>
   <ul>
