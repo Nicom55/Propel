@@ -1,1 +1,8 @@
 Welcome to Propel!
+
+View your goals below:
+
+<% @goals.each do |goal| %>
+  <%= goal.title %>
+  <%= goal.body %>
+<% end %>

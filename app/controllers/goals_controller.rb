@@ -32,6 +32,7 @@ class GoalsController < ApplicationController
     else
       @errors = @goal.errors
       render :edit
+    end
   end
 
   def delete
@@ -44,5 +45,5 @@ class GoalsController < ApplicationController
     def goal_params
       params.require(:goal).permit(:title, :body)
     end
-  
+    
 end
