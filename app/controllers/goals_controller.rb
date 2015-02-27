@@ -39,7 +39,7 @@ class GoalsController < ApplicationController
   def delete
     @goal = Goal.find(params[:id])
     @goal.destroy
-    redirect_to goals_path
+    redirect_to root_path
   end
     
     private 
