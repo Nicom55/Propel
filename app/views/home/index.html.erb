@@ -9,6 +9,7 @@ View your goals below:
       <%= content_tag :p, goal.body %>  
       <p>
         <%= link_to "View Details", goal_path(goal) %> 
+        <%= link_to "Edit", edit_goal_path(goal) %> 
       </p>
     <% end %>
   <% end %>

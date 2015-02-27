@@ -1,6 +1,19 @@
 Create A New Goal!
 
 <%= form_for(@goal) do |g| %>
+
+<% if @errors %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@errors.count, "error") %> prohibited this Goal from being saved:</h2>
+
+    <ul>
+      <% @errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
   <div class="field">
     <%= g.label :title %><br>
     <%= g.text_field :title %>
