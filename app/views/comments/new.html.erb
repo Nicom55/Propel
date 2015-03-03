@@ -1,0 +1,9 @@
+New Comment:
+<%= form_for(@comment) do |c| %>
+  <div class="field">
+    <%= c.text_field :body %>
+  </div>
+  <div class="actions">
+    <%= c.submit %>
+  </div>
+<% end %>

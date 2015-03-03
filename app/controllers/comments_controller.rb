@@ -2,7 +2,12 @@ class CommentsController < ApplicationController
   
   def create
     @comment = Comment.create(comment_params)
-    redirect_to :back
+    if @comment.save
+      redirect_to goal_path(goal)
+    else
+      @errors = @comment.errors
+      render :new
+    end
   end
   
   def show
@@ -16,7 +21,6 @@ class CommentsController < ApplicationController
   def delete
     @comment = Comment.find(params[:id])
     @comment.destroy
-    redirect_to :back
   end
   
   private
