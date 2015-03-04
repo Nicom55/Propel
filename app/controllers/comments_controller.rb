@@ -1,13 +1,9 @@
 class CommentsController < ApplicationController
   
   def create
-    @comment = Comment.create(comment_params)
-    if @comment.save
-      redirect_to goal_path(goal)
-    else
-      @errors = @comment.errors
-      render :new
-    end
+    @goal = Goal.find(params[:goal_id])
+    @comment = @goal.comments.create(params[:comment].permit(:body))
+    redirect_to goal_path(@goal)
   end
   
   def show

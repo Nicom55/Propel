@@ -6,6 +6,9 @@ class GoalsController < ApplicationController
   
   def show
     @goal = Goal.find(params[:id])
+    #trying to fix the .comments error
+    @comment = @goal.comments.create(params[:comment].permit(:body))
+    redirect_to goal_path(@goal)
   end
 
   def new

@@ -5,9 +5,32 @@
   <%= content_tag :p, @goal.created_at %>
   <%= content_tag :p, @goal.updated_at %>
   <nav>
+    <!-- Show all comments on this goal -->
+    <h2>Comments</h2>
+      <% @goal.comments.each do |comment| %>
+        <p>
+          <strong>Comment:</strong>
+          <%= comment.body %>
+        </p>
+      <% end %>
+    
+    
+    
+    <!-- Trying a new comment form on this page, rather than a new page-->
+    <h2>Add a comment:</h2>
+      <%= form_for([@goal, @goal.comments.build]) do |f| %>
+        <p>
+          <%= f.label :body %><br />
+          <%= f.text_area :body %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+    
     
     <ul>
-      <li><%= link_to "Add a Comment", new_goal_comment_path(@goal) %></li>
+      <!-- <li><%= link_to "Add a Comment", new_goal_comment_path(@goal) %></li> -->
       <li><%= link_to "Delete", goal_path(@goal), method: :delete, data: { confirm: 'Are you sure?' } %></li>
       <li><%= link_to "Home", root_path %></li>
     </ul>
