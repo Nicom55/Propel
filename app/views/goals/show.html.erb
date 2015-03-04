@@ -7,7 +7,7 @@
   <nav>
     
     <ul>
-      <li><%= link_to "Add a Comment", new_goal_comment_path %></li>
+      <li><%= link_to "Add a Comment", new_goal_comment_path(@goal) %></li>
       <li><%= link_to "Delete", goal_path(@goal), method: :delete, data: { confirm: 'Are you sure?' } %></li>
       <li><%= link_to "Home", root_path %></li>
     </ul>
