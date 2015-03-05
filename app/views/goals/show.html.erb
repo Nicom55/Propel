@@ -1,15 +1,13 @@
 <div>
-  <%= content_tag :p, @goal.title %>
-  <%= content_tag :p, @goal.id %>
-  <%= content_tag :p, @goal.body%>
+  <h1><%= content_tag :p, @goal.title %></h1>
+    <p>The Details: </p>
+    <%= content_tag :p, @goal.body%>
   <%= content_tag :p, @goal.created_at %>
-  <%= content_tag :p, @goal.updated_at %>
   <nav>
     <!-- Show all comments on this goal -->
-    <h2>Comments</h2>
+    <h3>All Comments</h3>
       <% @goal.comments.each do |comment| %>
         <p>
-          <strong>Comment:</strong>
           <%= comment.body %>
         </p>
       <% end %>
@@ -17,7 +15,7 @@
     
     
     <!-- Trying a new comment form on this page, rather than a new page-->
-    <h2>Add a comment:</h2>
+    <h3>Add a New Comment!</h3>
       <%= form_for([@goal, @goal.comments.build]) do |f| %>
         <p>
           <%= f.label :body %><br />
