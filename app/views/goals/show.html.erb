@@ -10,7 +10,7 @@
       <% @goal.comments.each do |comment| %>
         <p>
           <%= comment.body %>
-          <%= link_to "Delete Comment", goal_comment_path(:goal_id, :id), :confirm => "Are you sure?", :method => :delete %>
+          <%= link_to "Delete Comment", goal_comment_path(@goal, comment), :confirm => "Are you sure?", :method => :delete %>
         </p>
       <% end %>
     
