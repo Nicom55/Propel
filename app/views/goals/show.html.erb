@@ -2,14 +2,15 @@
   <h1><%= content_tag :p, @goal.title %></h1>
     <p>The Details: </p>
     <%= content_tag :p, @goal.body%>
-  <%= content_tag :p, @goal.created_at %>
+    Created <%= time_ago_in_words(@goal.created_at) %> ago.
   <nav>
     
     <!-- Show all comments on this goal -->
     <h3>All Comments</h3>
       <% @goal.comments.each do |comment| %>
         <p>
-          <%= comment.body %>
+          <%= content_tag :p, comment.body %>
+          Posted <%= time_ago_in_words(comment.created_at) %> ago.
           <%= link_to "Delete Comment", goal_comment_path(@goal, comment), :confirm => "Are you sure?", :method => :delete %>
         </p>
       <% end %>
