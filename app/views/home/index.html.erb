@@ -6,8 +6,6 @@
   <% @goals.each do |goal| %>
     <%= div_for goal do %>
       <h4><%= content_tag :p, goal.title, class: "strong" %></h4>
-      <%= content_tag :p, goal.body %>  
-      Created <%= time_ago_in_words(goal.created_at) %> ago.
       <p>
         <%= link_to "View Details", goal_path(goal) %> 
         <%= link_to "Edit", edit_goal_path(goal) %> 
