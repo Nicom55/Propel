@@ -14,14 +14,6 @@ class CommentsController < ApplicationController
     @comment = Comment.new
   end
   
-  #unnecessary?
-  def delete
-    @comment = Comment.find(params[:id])
-    @goal = @comment.goal
-    @comment.destroy
-    redirect_to goal_path(@goal)
-  end
-  
   def destroy
     @comment = Comment.find(params[:id])
     @goal = @comment.goal
