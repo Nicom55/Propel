@@ -6,12 +6,6 @@ class GoalsController < ApplicationController
   
   def show
     @goal = Goal.find(params[:id])
-    
-    #the below line creates a new "delete comment" link every time you reload the page
-    #@comment = @goal.comments.create(params[:comment])
-    
-    #the below line causes a redirect loop
-    #redirect_to goal_path(@goal)
   end
 
   def new
