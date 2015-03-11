@@ -18,10 +18,9 @@
     
     
     <!-- Trying a new comment form on this page, rather than a new page-->
-    <h3>Add a New Comment!</h3>
+    <h3>Post A Comment!</h3>
       <%= form_for([@goal, @goal.comments.build]) do |f| %>
         <p>
-          <%= f.label :body %><br />
           <%= f.text_area :body %>
         </p>
         <p>
