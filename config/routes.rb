@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  get "log_out" => 'sessions#destroy', :as => "log_out"
+  
+  get "log_in" => 'sessions#new', :as => "log_in"
 
   get "sign_up" => 'users#new', :as => "sign_up"
 
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :users
+  resources :sessions
   
   resources :goals do
     resources :comments
