@@ -3,15 +3,16 @@
 <h3>Sign up here:</h3>
 
 <%= form_for @user do |f| %>
-<% if @user.errors.any? %>
-<div class="error_messages">
-  <h2>Invalid Beacuse...</h2>
-  <ul>
-    <% for message in @user.errors.full_messages %>
-    <li><%= message %></li>
-    <% end %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+    <h2>Invalid Beacuse...</h2>
+       <ul>
+          <% for message in @user.errors.full_messages %>
+            <li><%= message %></li>
+          <% end %>
+       </ul>
     </div>
-  </ul>
+<% end %>
 
 <p>
   <%= f.label :email %><br />
