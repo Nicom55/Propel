@@ -1,2 +1,31 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Welcome to Propel!</h1>
+<h3>Ready to Track Some Aweosme Goals?</h3>
+<h3>Sign up here:</h3>
+
+<%= form_for @user do |f| %>
+<% if @user.errors.any? %>
+<div class="error_messages">
+  <h2>Invalid Beacuse...</h2>
+  <ul>
+    <% for message in @user.errors.full_messages %>
+    <li><%= message %></li>
+    <% end %>
+    </div>
+  </ul>
+
+<p>
+  <%= f.label :email %><br />
+  <%= f.text_field :email %>
+</p>
+<p>
+  <%= f.label :password %><br />
+  <%= f.password_field :password %>
+</p>
+<p>
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %>
+</p>
+  
+<p class="button"><%= f.submit %></p>
+  
+<% end %>
