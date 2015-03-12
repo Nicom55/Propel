@@ -7,6 +7,9 @@ gem 'rails', '4.2.0'
 #Bootstrap gem
 gem 'bootstrap-sass',       '3.2.0.0'
 
+# Use bcrypt for password encryption
+gem "bcrypt", :require => "bcrypt"
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
