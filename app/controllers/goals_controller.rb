@@ -39,7 +39,7 @@ class GoalsController < ApplicationController
   def destroy
     @goal = Goal.find(params[:id])
     @goal.destroy
-    redirect_to root_path
+    redirect_to home_page_path
   end
     
     private 
