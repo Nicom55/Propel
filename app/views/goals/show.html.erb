@@ -9,7 +9,7 @@
     <h3>All Comments</h3>
       <% @goal.comments.each do |comment| %>
         <p>
-          <%= content_tag :p, comment.body %>
+          <h5><%= content_tag :p, comment.body %></h5>
           Posted <%= time_ago_in_words(comment.created_at) %> ago.
           <%= link_to "Delete Comment", goal_comment_path(@goal, comment), :confirm => "Are you sure?", :method => :delete %>
         </p>

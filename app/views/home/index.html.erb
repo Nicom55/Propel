@@ -1,6 +1,6 @@
 <h1>Welcome to Propel!</h1>
 
-<h2>View your goals below:</h2>
+<h2>View your community's Goals below:</h2>
 
 <div>
   <% @goals.each do |goal| %>
@@ -16,8 +16,6 @@
 
 
 <nav>
-  <ul>
     <li><%= link_to "View All Goals", goals_path %></li>
     <li><%= link_to "Create a New Goal", new_goal_path %></li>
-  </ul>
 </nav>

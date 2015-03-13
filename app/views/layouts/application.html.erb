@@ -9,7 +9,7 @@
 <body>
   <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <p class="main-title"><%= link_to "Propel.", root_path %></p>
+        <p class="main-title"><%= link_to_if current_user, "Propel.", home_page_path %></p>
       </div>
     
     <div class="user-nav">
