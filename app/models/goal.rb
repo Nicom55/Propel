@@ -8,8 +8,6 @@ class Goal < ActiveRecord::Base
   
   #making goals likeable
   has_many :likes, as: :likeable
-  
-  # goals have comments!
   has_many :comments
   
 end
