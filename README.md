@@ -7,4 +7,5 @@ New things I've learned by building this app:
 - More about link_to and link_to_if
 - User sign-in and sessions
 - Password encryption with bcrypt
-- Bootstrap
+- Implementing Bootstrap
+- Basic Testing Principles
