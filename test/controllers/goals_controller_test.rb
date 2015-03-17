@@ -18,4 +18,9 @@ class GoalsControllerTest < ActionController::TestCase
     assert_response :success
   end
   
+  test "it should get a show page for one goal" do
+    get :show
+    assert_response :success
+  end
+  
 end
