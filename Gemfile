@@ -11,7 +11,7 @@ gem 'bootstrap-sass',       '3.2.0.0'
 gem "bcrypt", :require => "bcrypt"
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 
 #use postgres for deployment to heroku
 gem 'pg' 
